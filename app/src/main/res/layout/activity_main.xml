@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+ <RelativeLayout
+     android:id="@+id/rl_top_bar"
+     android:layout_width="match_parent"
+     android:layout_height="60dp"
+     android:gravity="top"
+     android:layout_alignParentTop="true"
+     android:background="#ff0000ff"
+     >
+ </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/rl_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/btn_first"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="first"/>
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="second"/>
+        <Button
+            android:id="@+id/btn_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="three"/>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragmet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top_bar"
+        android:layout_above="@id/rl_bottom_menu"
+        android:background="#ffffffff">
+    </FrameLayout>
+
+</RelativeLayout>
