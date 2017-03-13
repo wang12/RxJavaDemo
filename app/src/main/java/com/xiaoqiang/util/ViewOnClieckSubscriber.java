@@ -1,5 +1,6 @@
 package com.xiaoqiang.util;
 
+import android.util.Log;
 import android.view.View;
 
 import java.lang.ref.WeakReference;
@@ -15,6 +16,7 @@ import static rx.android.MainThreadSubscription.verifyMainThread;
  */
 
 public class ViewOnClieckSubscriber implements Observable.OnSubscribe<View> {
+    private static final String TAG = "ViewOnClieckSubscriber";
     private WeakReference<View> view;
 
     public ViewOnClieckSubscriber(View v) {
@@ -32,9 +34,11 @@ public class ViewOnClieckSubscriber implements Observable.OnSubscribe<View> {
                 }
             }
         };
+        Log.d(TAG, "call: "+this);
         subscriber.add(new MainThreadSubscription() {
             @Override
             protected void onUnsubscribe() {
+                Log.d(TAG, "onUnsubscribe: ");
                 if (view.get() != null)
                     view.get().setOnClickListener(null);
             }

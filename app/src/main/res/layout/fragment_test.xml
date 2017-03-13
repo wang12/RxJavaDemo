@@ -13,4 +13,11 @@
         android:gravity="center"
         android:textColor="#ff000000"
         android:text="ceshi" />
+
+    <Button
+        android:id="@+id/show_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ShowDialog"
+        android:visibility="gone"/>
 </LinearLayout>
