@@ -1,23 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Base.AppTheme" parent="Theme.AppCompat">
         <!--Android系统自带标题栏颜色,一般情况下，我们都会设置为去除标题栏-->
         <item name="colorPrimary">#ff00ff00</item>
+        <!--标题栏的字体颜色-->
+        <item name="android:textColorPrimary">#ff000000</item>
         <!--系统状态栏颜色-->
-        <item name="colorPrimaryDark">#FFff0000</item>
+        <item name="colorPrimaryDark">#ffff0000</item>
         <!--EditText编辑、RadioButton和CheckBox选中时的颜色-->
         <item name="colorAccent">#ff0000ff</item>
+        <!--EditText、RadioButton和CheckBox等预设颜色-->
+        <item name="colorControlNormal">#ff00ff00</item>
         <!--去除标题栏-->
         <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">true</item>
+        <item name="windowActionBar">false</item>
         <!--只是一个主窗口的颜色，必须使用这种引用的方式设置颜色-->
         <item name="android:windowBackground">@android:color/white</item>
         <!--会影响所有的颜色-->
         <item name="android:colorBackground">#FF00ff00</item>
         <!--前景色，为什么字体颜色不发生改变呢？？-->
         <item name="android:colorForeground">#ff000000</item>
-        <!--标题栏的字体颜色-->
-        <item name="android:textColorPrimary">#ff000000</item>
+        <!--底部按钮的颜色，必须在5.0及以上系统才会生效-->
+        <item name="android:navigationBarColor">#ff099099</item>
+
+        <!--还是状态栏的颜色，只有在5.0以上系统才会生效-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
         <item name="android:textColor">#ff000000</item>
-        <item name="colorControlNormal">#ff00ff00</item>
     </style>
 </resources>

@@ -3,48 +3,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
- <RelativeLayout
-     android:id="@+id/rl_top_bar"
-     android:layout_width="match_parent"
-     android:layout_height="60dp"
-     android:gravity="top"
-     android:layout_alignParentTop="true"
-     android:background="#ff0000ff"
-     >
- </RelativeLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:id="@+id/rl_bottom_menu"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/btn_first"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="first"/>
+            android:text="first" />
+
         <Button
             android:id="@+id/btn_second"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="second"/>
+            android:text="second" />
+
         <Button
             android:id="@+id/btn_three"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="three"/>
+            android:text="three" />
     </LinearLayout>
+
     <FrameLayout
         android:id="@+id/fragmet_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/rl_top_bar"
         android:layout_above="@id/rl_bottom_menu"
-        android:background="#ffffffff">
-    </FrameLayout>
+        android:layout_below="@id/tool_bar"
+        android:background="#ffffffff"></FrameLayout>
 
 </RelativeLayout>
