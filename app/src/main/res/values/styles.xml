@@ -20,4 +20,8 @@
         <item name="android:textColor">#ff000000</item>
         <item name="colorControlNormal">#ff00ff00</item>
     </style>
+    <style name="Base.ActionBar" parent="Base.AppTheme">
+        <!--<item name="android:homeAsUpIndicator">@drawable/back</item>-->
+        <!--<item name="contentInsetLeft">18dp</item>-->
+    </style>
 </resources>

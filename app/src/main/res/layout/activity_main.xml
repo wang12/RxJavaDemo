@@ -3,14 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
+    <include
         android:id="@+id/tool_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize">
-
-    </android.support.v7.widget.Toolbar>
+        layout="@layout/tool_bar_base" />
 
     <LinearLayout
         android:id="@+id/rl_bottom_menu"
