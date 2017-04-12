@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<com.xiaoqiang.view.ToolLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?attr/colorPrimary"
-    app:navigationIcon="@drawable/back"
-    app:contentInsetStartWithNavigation="20dp"
-    app:contentInsetLeft="0dp"
-    app:contentInsetStart="0dp"
-    app:title="首页"
-    app:subtitle="Home"
-    app:logo="@drawable/logo"
-    android:minHeight="?attr/actionBarSize">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:layout_gravity="center"
-    android:text="居中的主题"
-    />
-</android.support.v7.widget.Toolbar>
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="20dp"
+        app:logo="@drawable/logo"
+        app:navigationIcon="@drawable/back"
+        app:subtitle="Home"
+        app:title="首页">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="居中的主题" />
+    </android.support.v7.widget.Toolbar>
+</com.xiaoqiang.view.ToolLinearLayout>

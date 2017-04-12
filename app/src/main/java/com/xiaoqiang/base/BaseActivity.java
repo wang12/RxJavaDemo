@@ -20,32 +20,12 @@ import java.lang.reflect.Field;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
-    private Toolbar toolbar;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         makeActionOverflowMenuShown();
         super.onCreate(savedInstanceState);
         setContentView(loadLayout());
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(BaseActivity.this, "点击了返回按钮", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.inflateMenu(R.menu.menu_base);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                Toast.makeText(BaseActivity.this, "点击的菜单", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
         initView();
         initData();
 
